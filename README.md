@@ -43,8 +43,8 @@ API reference
 -------------
 
 ```typescript
-function javascript(options?: OptionRules<JsonRuleOptions> & OptionFiles & OptionIgnores & OptionOverridesFiles & OptionOverridesIgnores): Configurator;
-function regexp(options?: OptionRules<JsoncRuleOptions> & OptionFiles & OptionIgnores & OptionOverridesFiles & OptionOverridesIgnores): Configurator;
+function javascript(options?: OptionRules<JavaScriptRuleOptions> & OptionFiles & OptionIgnores & OptionOverridesFiles & OptionOverridesIgnores): Configurator;
+function regexp(options?: OptionRules<RegExpRuleOptions> & OptionFiles & OptionIgnores & OptionOverridesFiles & OptionOverridesIgnores): Configurator;
 ```
 
 Contributions
