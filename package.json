@@ -1,7 +1,7 @@
 {
 	"name": "@zokugun/eslint-config-js",
 	"description": "ESLint configurations for JavaScript, and RegExp with EditorConfig support.",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"author": {
 		"name": "Baptiste Augrain",
 		"email": "daiyam@zokugun.org"
