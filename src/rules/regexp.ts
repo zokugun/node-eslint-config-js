@@ -1,7 +1,7 @@
 import type { CommonsRuleOptions } from '@zokugun/eslint-toolkit'
-import type { RuleOptions } from '../typegens/regexp.js';
+import type { RegExpRuleOptions } from '../typegens/regexp.js';
 
-export const rules: Required<RuleOptions | CommonsRuleOptions> = {
+export const regExpRules: Required<RegExpRuleOptions | CommonsRuleOptions> = {
 	'regexp/confusing-quantifier': [
 		'error',
 	],

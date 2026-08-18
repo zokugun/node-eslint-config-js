@@ -1,12 +1,10 @@
-import type { CommonsRuleOptions, Configurator, OptionFiles, OptionIgnores, OptionOverridesFiles, OptionOverridesIgnores, OptionRules } from '@zokugun/eslint-toolkit'
+import type { CommonsRuleOptions, Configurator, DefaultOptions } from '@zokugun/eslint-toolkit';
 
-import plugin from '@eslint/js'
+import plugin from '@eslint/js';
 
-import { rules } from './rules/javascript.js';
+import { javaScriptRules } from './rules/javascript.js';
 
-type Options = OptionRules<CommonsRuleOptions> & OptionFiles & OptionIgnores & OptionOverridesFiles & OptionOverridesIgnores;
-
-export function javascript(options: Options = {}): Configurator {
+export function javascript(options: DefaultOptions<CommonsRuleOptions> = {}): Configurator {
 	const files = options.overrides?.files ?? [
 		'**/*.?([cm])js',
 		...(options.files ?? []),
@@ -14,10 +12,15 @@ export function javascript(options: Options = {}): Configurator {
 
 	const ignores = options.overrides?.ignores ?? options.ignores ?? [];
 
-	return (resolve, register) => {
-		register('javascript.sources', files);
+	const rules = options.overrides?.rules ?? {
+		...javaScriptRules,
+		...options.rules,
+	};
 
-		const globals = resolve('javascript.globals.default') ?? {};
+	return (resolve, register) => {
+		register('javascript/sources', files);
+
+		const globals = resolve('javascript/globals/default') ?? {};
 
 		return [
 			{
@@ -30,10 +33,7 @@ export function javascript(options: Options = {}): Configurator {
 				languageOptions: {
 					globals,
 				},
-				rules: {
-					...rules,
-					...options.rules,
-				},
+				rules,
 			},
 			{
 				files: ['**/*.cjs'],
@@ -50,4 +50,3 @@ export function javascript(options: Options = {}): Configurator {
 		];
 	};
 }
-
