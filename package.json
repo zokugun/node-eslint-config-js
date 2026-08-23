@@ -18,19 +18,10 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"import": "./lib/esm/index.mjs",
-			"require": "./lib/cjs/index.cjs"
+			"import": "./lib/esm/index.mjs"
 		}
 	},
-	"main": "lib/cjs/index.cjs",
 	"module": "lib/esm/index.mjs",
-	"typesVersions": {
-		"*": {
-			".": [
-				"./lib/cjs/index.d.cts"
-			]
-		}
-	},
 	"scripts": {
 		"audit:fix": "npm audit fix --min-release-age=0",
 		"build": "npm run clean && npm run build:lib",
