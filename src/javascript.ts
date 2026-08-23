@@ -38,13 +38,13 @@ export function javascript(options: DefaultOptions<CommonsRuleOptions> = {}): Co
 			{
 				files: ['**/*.cjs'],
 				languageOptions: {
-					globals: resolve('javascript.globals.cjs'),
+					globals: resolve('javascript/globals/cjs'),
 				},
 			},
 			{
 				files: ['**/*.mjs'],
 				languageOptions: {
-					globals: resolve('javascript.globals.esm'),
+					globals: resolve('javascript/globals/esm'),
 				},
 			},
 		];
