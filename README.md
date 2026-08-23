@@ -1,11 +1,13 @@
 [@zokugun/eslint-config-js](https://github.com/zokugun/node-eslint-config-js)
 =============================================================================
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![NPM Version](https://img.shields.io/npm/v/@zokugun/eslint-config-js.svg?colorB=green)](https://www.npmjs.com/package/@zokugun/eslint-config-js)
-[![Donation](https://img.shields.io/badge/donate-ko--fi-green)](https://ko-fi.com/daiyam)
-[![Donation](https://img.shields.io/badge/donate-liberapay-green)](https://liberapay.com/daiyam/donate)
-[![Donation](https://img.shields.io/badge/donate-paypal-green)](https://paypal.me/daiyam99)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/@zokugun/eslint-config-js?color=brightgreen)](https://www.npmjs.com/package/@zokugun/eslint-config-js)
+[![NodeJS Version](https://img.shields.io/badge/node.js-%3E%3D%2020.19-green)](#requirements)
+[![Modules](https://img.shields.io/badge/modules-ESM-green)](#requirements)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-f87171?logo=kofi&logoColor=white)](https://ko-fi.com/daiyam)
+[![Liberapay](https://img.shields.io/badge/Liberapay-facc15?logo=liberapay&logoColor=black)](https://liberapay.com/daiyam/donate)
+[![PayPal](https://img.shields.io/badge/PayPal-5277C3?logo=paypal&logoColor=white)](https://paypal.me/daiyam99)
 
 > A collection ready-to-use ESLint configurations for JavaScript and RegExp. Customize files, ignores and rules per project. Integrates EditorConfig to match your coding style.
 
@@ -23,6 +25,13 @@ Installation
 ```bash
 npm add @zokugun/eslint-config-js
 ```
+
+Requirements
+------------
+
+- **ESLint**: `v10` or higher
+- **Node.js**: `v20.19` or higher
+- **Modules**: ECMAScript Modules (`ESM`)
 
 Quick Start
 -----------
